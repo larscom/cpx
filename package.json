@@ -1,9 +1,9 @@
 {
-  "name": "cpx",
-  "version": "1.5.0",
+  "name": "@larscom/cpx",
+  "version": "2.0.0",
   "description": "Copy file globs, watching for changes.",
   "engines": {
-    "node": ">=6.5"
+    "node": ">=8"
   },
   "main": "lib/index.js",
   "bin": "bin/index.js",
@@ -11,14 +11,15 @@
     "bin",
     "lib"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "_mocha": "_mocha \"test/*.js\" --timeout 15000",
     "clean": "rimraf .nyc_output coverage test-ws",
     "codecov": "nyc report -r lcovonly && codecov",
     "coverage": "nyc report -r lcov && opener coverage/lcov-report/index.html",
-    "lint": "eslint bin lib test",
     "postversion": "git push && git push --tags",
-    "pretest": "npm run -s lint",
     "preversion": "npm test",
     "test": "nyc --require babel-register npm run -s _mocha",
     "watch": "npm run -s _mocha -- --require babel-register --watch --growl"
@@ -44,7 +45,7 @@
     "codecov": "^3.0.2",
     "eslint": "^5.0.1",
     "mocha": "^5.2.0",
-    "nyc": "12.0.2",
+    "nyc": "^15.0.0",
     "opener": "^1.4.3",
     "p-event": "^2.0.0",
     "power-assert": "^1.6.0",
@@ -54,7 +55,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mysticatea/cpx.git"
+    "url": "https://github.com/larscom/cpx.git"
   },
   "keywords": [
     "cp",
@@ -72,10 +73,10 @@
     "file",
     "files"
   ],
-  "author": "Toru Nagashima",
+  "author": "Lars Kniep",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mysticatea/cpx/issues"
+    "url": "https://github.com/larscom/cpx/issues"
   },
-  "homepage": "https://github.com/mysticatea/cpx"
+  "homepage": "https://github.com/larscom/cpx"
 }
