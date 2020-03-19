@@ -1,7 +1,8 @@
-# cpx
+# @larscom/cpx
 
-[![npm version](https://img.shields.io/npm/v/cpx.svg)](https://www.npmjs.com/package/@larscom/cpx)
-[![Downloads/month](https://img.shields.io/npm/dm/cpx.svg)](http://www.npmtrends.com/@larscom/cpx)
+[![npm-version](https://img.shields.io/npm/v/@larscom/cpx.svg?label=npm%20version)](https://www.npmjs.com/package/@larscom/cpx)
+[![license](https://img.shields.io/npm/l/@larscom/cpx)](https://github.com/larscom/cpx/blob/master/LICENSE)
+![npm-dl](https://img.shields.io/npm/dw/@larscom/cpx)
 
 Copy file globs, watching for changes.
 
