@@ -1,7 +1,7 @@
 {
   "name": "@larscom/cpx",
   "version": "2.0.0",
-  "description": "Copy file globs, watching for changes.",
+  "description": "Up-to-date copy file globs, watching for changes.",
   "engines": {
     "node": ">=8"
   },

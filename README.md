@@ -2,12 +2,16 @@
 
 [![npm-version](https://img.shields.io/npm/v/@larscom/cpx.svg?label=npm%20version)](https://www.npmjs.com/package/@larscom/cpx)
 [![license](https://img.shields.io/npm/l/@larscom/cpx)](https://github.com/larscom/cpx/blob/master/LICENSE)
-![npm-dl](https://img.shields.io/npm/dw/@larscom/cpx)
+
+## Intro
 
 Copy file globs, watching for changes.
 
 This module provides a CLI tool like `cp`, but with watching.
 
+## Notice
+
+This project is a fork of [cpx](https://www.npmjs.com/package/cpx) with up to date dependencies.
 
 ## Installation
 
@@ -50,7 +54,6 @@ Options:
                               the file to <dest> every changing.
 ```
 
-
 ## Example
 
 ```
@@ -83,20 +86,19 @@ $ cpx "src/**/*.js" app -w -t babelify -t uglifyify
 
 It maybe can use to add header comment, to optimize images, or etc...
 
-
 ## Node.js API
 
 You can use this module as a node module.
 
 ```js
-var cpx = require("cpx");
+var cpx = require('cpx');
 ```
 
 ### cpx.copy
 
 ```ts
-cpx.copy(source, dest, options, callback)
-cpx.copy(source, dest, callback)
+cpx.copy(source, dest, options, callback);
+cpx.copy(source, dest, callback);
 ```
 
 - **source** `{string}` -- A file glob of copy targets.
@@ -116,8 +118,8 @@ Copy files that matches with `source` glob to `dest` directory.
 ### cpx.copySync
 
 ```ts
-cpx.copySync(source, dest, options)
-cpx.copySync(source, dest)
+cpx.copySync(source, dest, options);
+cpx.copySync(source, dest);
 ```
 
 A synchronous function of `cpx.copy`.
@@ -128,12 +130,12 @@ But `options.transform` is not supported.
 ### cpx.watch
 
 ```ts
-cpx.watch(source, dest, options)
-cpx.watch(source, dest)
+cpx.watch(source, dest, options);
+cpx.watch(source, dest);
 ```
 
 Copy files that matches with `source` glob string to `dest` directory.
-After the first copy, starts observing.  And copy the files when every changes.
+After the first copy, starts observing. And copy the files when every changes.
 
 Arguments is same as `cpx.copy`.
 
@@ -143,7 +145,6 @@ Arguments is same as `cpx.copy`.
 - `.on("remove", (e) => { ... })` : Be fired after file is removed. `e.path` is a path of removed file.
 - `.on("watch-ready", () => { ... })` : Be fired when started watching files, after the first copying.
 - `.on("watch-error", (err) => { ... })` : Be fired when occured errors during watching.
-
 
 ## Contributing
 
